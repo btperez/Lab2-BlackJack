@@ -13,7 +13,7 @@ public class Deck {
 	//	TODO: Add 'cards' attribute that is an ArrayList of Card
 	private ArrayList<Card> cards = new ArrayList<Card>();
 	
-	//	TODO: Add a contructor that passes in the number of decks, and then populates
+	//	TODO: Add a constructor that passes in the number of decks, and then populates
 	//			ArrayList<Card> with cards (depending on number of decks).
 	public Deck(int iNbrofDecks) throws DeckException  {
 	
@@ -42,6 +42,12 @@ public class Deck {
 		this(1);
 		
 		
+	}
+	
+	public Card Draw() throws DeckException {
+		if(cards.size() == 0)
+			throw new DeckException(this);
+		return cards.remove(0);
 	}
 }
 

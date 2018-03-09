@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import pkgEnum.eRank;
+import pkgException.DeckException;
 
 public class Hand {
 
